@@ -22,7 +22,7 @@ app.get('/alunos', async (req, res) => {
         res.json(result.rows);
     } catch (error) {
         console.error('Erro ao listar alunos:', error);
-        res.status(500).json({ message: 'Erro ao listar alunos' });
+        res.status(500).json({ message: 'Erro ao listar alunos', error: error.message });
     }
 });
 
